@@ -14,10 +14,22 @@
     <artifactId>HeavenEarthFamilyGreatLoveLeague</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>HeavenEarthFamilyGreatLoveLeague</name>
-    <description>Demo project for Spring Boot</description>
+    <description>天地一家大爱盟</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <mybatis-plus-boot-starter.version>3.0.5</mybatis-plus-boot-starter.version>
+        <mybatis-plus-generator.version>3.0.5</mybatis-plus-generator.version>
+        <velocity-engine-core.version>2.2</velocity-engine-core.version>
+        <hutool-all.version>5.7.17</hutool-all.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <fastjson.version>1.2.54</fastjson.version>
+        <xxl-job-core.version>2.3.0</xxl-job-core.version>
+        <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <knife4j-spring-boot-starter.version>2.0.4</knife4j-spring-boot-starter.version>
+        <jackson-databind.version>2.12.5</jackson-databind.version>
     </properties>
 
     <dependencies>
@@ -68,50 +80,79 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3</version>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+<!--        代码生成器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus-generator.version}</version>
+        </dependency>
+<!--        代码生成器模板-->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>${velocity-engine-core.version}</version>
         </dependency>
         <!--hutool工具包-->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.7.17</version>
+            <version>${hutool-all.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+            <version>${commons-lang3.version}</version>
         </dependency>
         <!--        阿里的fastjson-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.54</version>
+            <version>${fastjson.version}</version>
         </dependency>
 
 <!--        <dependency>-->
 <!--            <groupId>com.fasterxml.jackson.core</groupId>-->
 <!--            <artifactId>jackson-databind</artifactId>-->
-<!--            <version>2.12.5</version>-->
+<!--            <version>${jackson-databind.version}</version>-->
 <!--        </dependency>-->
 
-<!--        集成swagger-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
+
         <!--xxl-job-->
         <dependency>
             <groupId>com.xuxueli</groupId>
             <artifactId>xxl-job-core</artifactId>
-            <version>2.3.0</version>
+            <version>${xxl-job-core.version}</version>
         </dependency>
+
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid-spring-boot-starter.version}</version>
+        </dependency>
+<!--        接口文档-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger-ui.version}</version>
+        </dependency>
+        <!--        引入knife4j，优化swagger页面-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>${knife4j-spring-boot-starter.version}</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>

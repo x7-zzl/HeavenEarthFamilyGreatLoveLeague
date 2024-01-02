@@ -30,8 +30,9 @@
 安装环境：
 JDK8
 Mysql8.0
-Maven
-SpringBoot 2.x版本
+Maven 3.6.1
+SpringBoot 2.3.4
+xxl-job 
 
 #### 建议使用工具
 数据库可视化工具 Navicat

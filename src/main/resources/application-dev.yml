@@ -1,0 +1,42 @@
+#数据库连接
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.92.214.85:3306/greatLove?serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Zhangzili.200207
+
+  jpa:
+    properties:
+      hibernate:
+        #检查实体类和数据库表结构，更新策略
+        hbm2ddl.auto: update
+      #MySQL方言
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    #显示SQL
+    show-sql: true
+
+
+mybatis-plus:
+  configuration:
+    #是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+    map-underscore-to-camel-case: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+  mapper-locations: classpath:mapper/*.xml
+
+#xxl-job配置
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:7777/xxl-job-admin
+    accessToken: default_token
+    executor:
+      appname: zzl
+      address: ""
+      ip: ""
+      port: 9999
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30

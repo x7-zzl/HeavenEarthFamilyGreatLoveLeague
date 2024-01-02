@@ -1,12 +1,12 @@
-package heaven.earth.family;
+package com.great;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@MapperScan
 @SpringBootApplication
+@MapperScan("com.great.mapper")
 public class WorldApplication {
 
     public static void main(String[] args) {
